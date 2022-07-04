@@ -414,11 +414,11 @@ TEST(Int128Test, print)
     const Int128 z("63");
     const Int128 zero;
 
-    std::stringstream current_stream;
+    std::ostringstream current_stream;
     current_stream << x << " " << y << " " << z << " " << zero;
     EXPECT_EQ(current_stream.str(), expected_result);
 
-    std::stringstream current_stream_negated;
+    std::ostringstream current_stream_negated;
     current_stream_negated << -x << " " << -y << " " << -z << " " << -zero;
     EXPECT_EQ(current_stream_negated.str(), expected_negated_result);
 }
